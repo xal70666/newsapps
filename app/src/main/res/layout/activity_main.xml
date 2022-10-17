@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activity.MainActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:elevation="10dp"
+            android:minHeight="?attr/actionBarSize"
+            android:shadowColor="@color/black"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:subtitleTextColor="@color/black"
+            app:theme="@style/ToolbarColoredBackArrow"
+            app:titleTextColor="@color/black">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="News Apps"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:elevation="10dp"
+            android:shadowColor="@color/gray_474747"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:tabIndicatorColor="@color/blue_364F6B"
+            app:tabRippleColor="@color/gray_474747"
+            app:tabTextColor="@color/black_1E1E1E" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white_dadada"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+            tools:layout_editor_absoluteX="8dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
